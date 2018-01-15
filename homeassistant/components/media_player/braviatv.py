@@ -279,6 +279,11 @@ class BraviaTVDevice(MediaPlayerDevice):
         return self._muted
 
     @property
+    def is_media_playing(self):
+        """Boolean if media is playing."""
+        return self._playing
+    
+    @property
     def supported_features(self):
         """Flag media player features that are supported."""
         return SUPPORT_BRAVIA
